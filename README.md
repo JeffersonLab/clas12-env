@@ -6,9 +6,9 @@ This repository is the environment setup for CLAS12 software.  It leverages modu
 *Note, the modulefiles and software builds for GEANT4/GEMC and its dependencies are maintained separately at [insert link]() and can be used independently.*
 
 ### In Use
-The main branch is deployed on CVMFS and used for running software at JLab, on the Open Science Grid, or on any supported operating system with CVMFS access:
+The main branch is deployed on CVMFS and used for running software at JLab, on the Open Science Grid, or on any supported operating system with CVMFS access.  The entry point is:
 
-`/cvmfs/oasis.opensciencegrid.jlab.org/jlab/hallb/clas12/sw`
+`module use /cvmfs/oasis.opensciencegrid.jlab.org/jlab/hallb/clas12/sw/modulefiles`
 
 The documentation for just using these environment modules has so far been [maintained at this wiki](https://clasweb.jlab.org/wiki/index.php/CLAS12_Software_Environment_@_JLab).
 
