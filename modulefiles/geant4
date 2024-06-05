@@ -1,6 +1,6 @@
 #%Module1.0
 
-module-whatis initialize jlab geant4 modulefiles
+module-whatis initialize jlab geant4 modulefiles, https://geant4.jlab.org/node/1
 
 source [file dirname $ModulesCurrentModulefile]/../util/functions.tcl
 
