@@ -1,27 +1,25 @@
 # clas12-env
 
 ### Overview
-This repository is the environment setup for CLAS12 software.  It leverages modulefiles's prerequisites and conflicts to help ensure a working environment with easy and flexible manipulations.  
-
-*Note, the modulefiles and software builds for GEANT4/GEMC used in this environment are [documented separately](https://geant4.jlab.org/node/1) and can be used independently.*
+This repository is a runtime environment setup for CLAS12 software based on [module](https://modules.sourceforge.net/)[files](https://modules.readthedocs.io/en/latest/modulefile.html).  *The GEANT4/GEMC portions of this environment are [documented here](https://geant4.jlab.org/node/1) and can be used independently.*
 
 ### In Use
-The main branch is deployed on CVMFS and used for running software at JLab, on the Open Science Grid, or on any supported operating system with CVMFS access.  The entry point is:
+The main branch is deployed on CVMFS and used for running software at JLab, on the Open Science Grid, or on any supported operating system with CVMFS access:
 
 `module use /cvmfs/oasis.opensciencegrid.jlab.org/jlab/hallb/clas12/sw/modulefiles`
 
-The documentation for just using these environment modules has so far been [maintained at this wiki](https://clasweb.jlab.org/wiki/index.php/CLAS12_Software_Environment_@_JLab).
-
 ### Special Modules
-Most modules here just update one's environment for a single, particular software package, by adding that package's directory to some runtime executable/library search paths.  The modules below are a bit different.  Remember that `module show` will print what a given module will do to your environment.
+Most modules here just update one's environment for a single, particular software package, by adding that package's directory to some runtime executable/library search path(s).  These modules below are a bit different:
 * clas12
   * loads a bunch of other modules to provide a full CLAS12 environment in one shot
 * geant4
   * adds the [independent geant4-related modulefiles](https://geant4.jlab.org/node/1), e.g. gemc, to the search path
 * tmpfs
-  * sets various envionment variables to get various software (maven, apptainer, java, things that honor `TMPDIR`, etc.) to use a `/tmp` alternative, e.g. for when it's mounted noexec
+  * sets various environment variables to get various software (maven, apptainer, java, things that honor `TMPDIR`, etc.) to use a `/tmp` alternative, e.g. for when it's mounted noexec
+* scicomp
+  * adds software supported by JLab's scicomp group to the module search path
 
-Also, these two modules below are required by many other modules to provide some 3rd-party dependencies.  While no automated recipe currently exists for installation of those dependencies, they require only very standard build and install procedures with no patching.
+And these two modules below provide some 3rd-party dependencies installed in a "system-like" location:
 * system
   * sets `OSRELEASE` based on the operating system (via [this script](util/osrelease.py))
   * sets `CLAS12_HOME` (only for convenience)
