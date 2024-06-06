@@ -1,7 +1,7 @@
 # clas12-env
 
 ### Overview
-This repository is a runtime environment setup for CLAS12 software based on [module](https://modules.sourceforge.net/)[files](https://modules.readthedocs.io/en/latest/modulefile.html).  *The GEANT4/GEMC portions of this environment are [documented here](https://geant4.jlab.org/node/1) and can be used independently.*
+This repository is a runtime environment setup for CLAS12 software based on [module](https://modules.sourceforge.net/)[files](https://modules.readthedocs.io/en/latest/modulefile.html).  The GEANT4/GEMC portions of this environment are [documented here](https://geant4.jlab.org/node/1) and can be used independently.
 
 ### In Use
 The main branch is deployed on CVMFS and used for running software at JLab, on the Open Science Grid, or on any supported operating system with CVMFS access:
@@ -9,7 +9,7 @@ The main branch is deployed on CVMFS and used for running software at JLab, on t
 `module use /cvmfs/oasis.opensciencegrid.jlab.org/jlab/hallb/clas12/sw/modulefiles`
 
 ### Special Modules
-Most modules here just update one's environment for a single, particular software package, by adding that package's directory to some runtime executable/library search path(s).  These modules below are a bit different:
+Most modules here just update one's environment for a single, particular software package, by adding that package's location(s) to some runtime executable/library search path(s).  These modules below are a bit different:
 * clas12
   * loads a bunch of other modules to provide a full CLAS12 environment in one shot
 * geant4
