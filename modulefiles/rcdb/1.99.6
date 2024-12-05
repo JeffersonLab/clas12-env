@@ -1,6 +1,6 @@
 #%Module1.0
 
-module-whatis https://github.com/baltzell/rcdb
+module-whatis https://github.com/JeffersonLab/rcdb
 
 prereq pymods
 
@@ -10,7 +10,7 @@ source [file dirname $ModulesCurrentModulefile]/../util/functions.tcl
 
 setenv RCDB_HOME [home]/noarch/rcdb/$v
 
-setenv RCDB_CONNECTION mysql://rcdb@clasdb.jlab.org/rcdb 
+setenv RCDB_CONNECTION mysql://rcdb@clasdb.jlab.org/rcdb
 
 prepend-path PYTHONPATH $env(RCDB_HOME)/python
 
