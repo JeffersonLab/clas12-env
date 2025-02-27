@@ -1,0 +1,8 @@
+#%Module1.0
+
+module-whatis https://github.com/oracle/visualvm/releases/tag/2.1.10 
+
+source [file dirname $ModulesCurrentModulefile]/util/functions.tcl
+
+prepend-path PATH [home]/noarch/visualvm/2.1.10/bin
+
