@@ -1,0 +1,7 @@
+#%Module1.0
+
+module-whatis https://github.com/async-profiler/async-profiler/releases/tag/v3.0
+
+source [file dirname $ModulesCurrentModulefile]/util/functions.tcl
+
+prepend-path PATH [home]/[osrelease]/local/async-profiler/3.0/bin
