@@ -3,8 +3,6 @@
 module-whatis https://github.com/jeffersonlab/clas12-timeline
 
 prereq jdk
-prereq groovy
-prereq coatjava
 prereq rcdb
 
 source [file dirname $ModulesCurrentModulefile]/../util/functions.tcl
