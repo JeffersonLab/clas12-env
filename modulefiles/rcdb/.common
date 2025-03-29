@@ -6,5 +6,6 @@ source [file dirname $ModulesCurrentModulefile]/../util/functions.tcl
 
 setenv RCDB_HOME [home]/noarch/rcdb/$version
 setenv RCDB_CONNECTION mysql://rcdb@clasdb.jlab.org/rcdb 
+prepend-path PATH $env(RCDB_HOME)/bin
 prepend-path PYTHONPATH $env(RCDB_HOME)/python
 
