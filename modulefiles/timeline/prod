@@ -1,0 +1,15 @@
+#%Module1.0
+
+module-whatis https://github.com/jeffersonlab/clas12-timeline
+
+prereq jdk
+prereq groovy
+prereq coatjava
+prereq rcdb
+
+source [file dirname $ModulesCurrentModulefile]/../util/functions.tcl
+
+set d [home]/noarch/clas12-timeline/prod
+
+prepend-path PATH $d/bin
+
