@@ -1,3 +1,5 @@
+This repository is archival, read-only, moved to https://code.jlab.org/hallb/clas12/env
+
 # clas12-env
 [![Build Status](https://github.com/jeffersonlab/clas12-env/workflows/clas12-env-ci/badge.svg)](https://github.com/jeffersonlab/clas12-env/actions)
 
